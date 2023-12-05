@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test": "vitest",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-dev": "vite build --base=/unit-test-strajk-bowling"
   },
   "dependencies": {
     "nanoid": "^4.0.2",
@@ -20,10 +22,10 @@
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "jsdom": "^23.0.1",
     "msw": "^2.0.10",
-    "vite": "^4.1.0",
-    "vitest": "^0.34.6"
+    "vite": "^5.0.5",
+    "vitest": "^1.0.1"
   }
 }
