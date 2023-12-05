@@ -12,18 +12,13 @@ permissions:
   pages: write
 
 jobs:
-  prepare:
+  unit-test:
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Install modules
         run: npm install
-
-  unit-test:
-    needs: prepare
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Build dist
         run: npm run build-dev
       - name: Run unit test
@@ -33,6 +28,9 @@ jobs:
     needs: unit-test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Install modules
+        run: npm install
       - name: Build dist
         run: npm run build-dev
       - name: Setup pages
