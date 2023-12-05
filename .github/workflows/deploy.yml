@@ -5,7 +5,8 @@ on:
     branches:
       - dev
       - main
-
+env:
+  BASENAME: /unit-test-strajk-bowling
 permissions:
   contents: read
   packages: write
