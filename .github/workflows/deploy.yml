@@ -22,7 +22,10 @@ jobs:
   unit-test:
     needs: prepare
     runs-on: ubuntu-latest
+
     steps:
+      - name: Build dist
+        run: npm run build-dev
       - name: Run unit test
         run: npm test
 
