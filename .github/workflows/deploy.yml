@@ -24,8 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run unit test
-         run: npm run test
-
+        run: npm run test
 
   build:
     needs: unit-test
