@@ -27,7 +27,7 @@ jobs:
       - name: Build dist
         run: npm run build-dev
       - name: Run unit test
-        run: npm test
+        run: npm run test
 
   build:
     needs: unit-test
