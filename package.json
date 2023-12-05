@@ -8,7 +8,7 @@
     "test": "vitest",
     "build": "vite build",
     "preview": "vite preview",
-    "build-dev": "vite build --base=/unit-test-strajk-bowling"
+    "build-dev": "vite build --base=/unit-test-strajk-bowling/"
   },
   "dependencies": {
     "nanoid": "^4.0.2",
