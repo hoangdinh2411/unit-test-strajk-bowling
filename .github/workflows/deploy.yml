@@ -19,7 +19,7 @@ jobs:
       - name: Install modules
         run: npm install
       - name: Build dist
-        run: npm run build-dev
+        run: npm run build
       - name: Run unit test
         run: npm run test
 
@@ -31,7 +31,7 @@ jobs:
       - name: Install modules
         run: npm install
       - name: Build dist
-        run: npm run build-dev
+        run: npm run build
       - name: Setup pages
         uses: actions/configure-pages@v3
       - name: Upload dist folder
