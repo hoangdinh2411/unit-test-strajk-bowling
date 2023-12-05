@@ -15,7 +15,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: import.meta.env.BASENAME || '/',
+    basename: import.meta.env.VITE_BASENAME || '/',
   }
 );
 
