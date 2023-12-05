@@ -21,7 +21,7 @@ function Navigation() {
         href='#'
         className={`navigation__link ${showMenu ? '' : 'hide'}`}
         onClick={() => {
-          navigate('/');
+          navigate(import.meta.env.VITE_BASENAME || '/');
         }}
         data-testid='navigation-link'
       >
@@ -31,7 +31,11 @@ function Navigation() {
         href='#'
         className={`navigation__link ${showMenu ? '' : 'hide'}`}
         onClick={() => {
-          navigate('/confirmation');
+          navigate(
+            import.meta.env.VITE_BASENAME
+              ? `${import.meta.env.VITE_BASENAME}/confirmation`
+              : '/confirmation'
+          );
         }}
         data-testid='navigation-link'
       >
