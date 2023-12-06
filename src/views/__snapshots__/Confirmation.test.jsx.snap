@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing Confirmation page > Should show the message if there is no booking 1`] = `
+<h1
+  class="top__title"
+>
+  See you soon!
+</h1>
+`;
+
+exports[`Testing Confirmation page > Should show the message if there is no booking 2`] = `
+<h2
+  class="confirmation__no-booking"
+>
+  Inga bokning gjord!
+</h2>
+`;

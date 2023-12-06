@@ -15,8 +15,7 @@ permissions:
 jobs:
   unit-test:
     runs-on: ubuntu-latest
-    env:
-      VITE_BASENAME: /unit-test-strajk-bowling
+
     steps:
       - uses: actions/checkout@v4
       - name: Install modules
@@ -29,8 +28,7 @@ jobs:
   build:
     needs: unit-test
     runs-on: ubuntu-latest
-    env:
-      VITE_BASENAME: /unit-test-strajk-bowling
+
     steps:
       - uses: actions/checkout@v4
       - name: Install modules

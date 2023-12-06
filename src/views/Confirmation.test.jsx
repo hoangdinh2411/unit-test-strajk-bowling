@@ -14,7 +14,7 @@ describe('Testing Confirmation page', () => {
   it('Should show the message if there is no booking', () => {
     fireEvent.click(screen.getByTestId('navigation-icon'));
     fireEvent.click(screen.getByText('Confirmation'));
-    expect(screen.getByText('See you soon!')).toBeInTheDocument();
-    expect(screen.getByText('Inga bokning gjord!')).toBeInTheDocument();
+    expect(screen.getByText('See you soon!')).toMatchSnapshot();
+    expect(screen.getByText('Inga bokning gjord!')).toMatchSnapshot();
   });
 });
