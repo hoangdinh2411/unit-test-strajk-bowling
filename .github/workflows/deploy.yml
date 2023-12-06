@@ -1,0 +1,46 @@
+name: 'Unit test for The Strajk Bowling application'
+run-name: ${{github.actor}} is developer who deployed this app
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+  pages: write
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install modules
+        run: npm install
+      - name: Build dist
+        run: npm run build-dev
+      - name: Run unit test
+        run: npm run test
+
+  # build:
+  #   needs: unit-test
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Install modules
+  #       run: npm install
+  #     - name: Build dist
+  #       run: npm run build-dev
+  #     - name: Setup pages
+  #       uses: actions/configure-pages@v3
+  #     - name: Upload dist folder
+  #       uses: actions/upload-pages-artifact@v1
+  #       with:
+  #         path: './dist'
+  #     - name: Deploy to Github Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v1
