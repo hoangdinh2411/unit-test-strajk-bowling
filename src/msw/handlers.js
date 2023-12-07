@@ -8,7 +8,7 @@ const handlers = [
       const price = parseInt(body.lanes) * 100 + parseInt(body.people) * 120;
       const booking = {
         active: true,
-        id: 'STR9883PCKL',
+        id: 'STR691TQAG',
         price,
         lanes: body.lanes,
         people: body.people,

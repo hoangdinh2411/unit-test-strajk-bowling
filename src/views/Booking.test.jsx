@@ -111,7 +111,8 @@ describe('Testing Booking page', () => {
     fireEvent.click(screen.getByText('strIIIIIike!'));
     expect(fetch).toHaveBeenCalled();
     await waitFor(() => {
-      expect(screen.queryByTestId('booking-number').value).toBe('STR9883PCKL');
+      expect(screen.queryByTestId('booking-number').value).toBe('STR691TQAG');
+      expect(screen.queryByText('Inga bokning gjord!')).not.toBeInTheDocument();
     });
   });
 });
